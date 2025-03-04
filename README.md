@@ -49,6 +49,19 @@ client.once('ready', () => {
 
 client.login('YOUR_BOT_TOKEN'); // Tokenınızı buraya yazın
 ```
+### Başka bir örnek kullanım
+
+```js
+const { Client, GatewayIntentBits } = require('discord.js');
+const { oxypack } = require('oxypack'); // Oxy-Pack modülünü içe aktar
+
+oxypack(client, [
+  { name: '##oxydesign', type: 'WATCHING' },
+  { name: '##oxydesign', type: 'PLAYING' },
+  { name: '##oxydesign', type: 'LISTENING' },
+  { name: '##oxydesign', type: 'STREAMING', url: 'https://twitch.tv/example' }
+], 60000, true);  // Aktiviteyi her 1 dakikada bir değiştir
+```
 
 ### 3. Parametreler
 
