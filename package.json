@@ -1,0 +1,12 @@
+{
+    "name": "oxy-pack",
+    "version": "1.0.0",
+    "description": "Discord aktivitelerinden rastgele seçim yapan paket",
+    "main": "oxy.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "oxy",
+    "license": "MIT"
+  }
+  
