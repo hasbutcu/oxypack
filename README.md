@@ -16,28 +16,29 @@ Projenizi başlatmak ve **oxy-pack** modülünü kullanmak için aşağıdaki ad
 ### 1. Modülü Yükleme
 
 ```bash
-npm install oxy-pack
+npm install oxypack
 ```
 
 ### 2. Kullanım
 
-`oxy-pack` modülünü projenize dahil ettikten sonra, aşağıdaki gibi kullanabilirsiniz:
+`oxypack` modülünü projenize dahil ettikten sonra, aşağıdaki gibi kullanabilirsiniz:
 
 #### **Örnek Kod:**
 
 ```js
-const { Client, GatewayIntentBits, ActivityType } = require('discord.js');
-const { oxypack } = require('oxy-pack'); // Oxy-Pack modülünü içe aktar
+const { Client, GatewayIntentBits } = require('discord.js');
+const { oxypack } = require('oxypack'); // Oxy-Pack modülünü içe aktar
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
-const activities = [
-  { name: '##oxydesign', type: ActivityType.Watching },
-  { name: '##oxydesign', type: ActivityType.Playing },
-  { name: '##oxydesign', type: ActivityType.Listening },
-  { name: '##oxydesign', type: ActivityType.Competing },
-  { name: '##oxydesign', type: ActivityType.Streaming, url: 'https://twitch.tv/ornek' }
+const aktivite = [
+  { name: '##oxydesign' }, // Varsayılan olarak "Playing"
+  { name: '##oxydesign', type: 'watching' },
+  { name: '##oxydesign', type: 'listening' },
+  { name: '##oxydesign', type: 'competing' },
+  { name: '##oxydesign', type: 'streaming', url: 'https://twitch.tv/ornek' }
 ];
+
 
 client.once('ready', () => {
   console.log(`${client.user.tag} olarak giriş yaptım!`);
