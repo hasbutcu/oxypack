@@ -1,10 +1,6 @@
 # OxyPack
 
-<<<<<<< Updated upstream
-**OxyPack**; Discord botlarının durum bilgilerini rastgele değiştiren bir Node.js modülüdür. Botunuzun aktivitelerini dinamik olarak değiştirmek için kullanabilirsiniz. Bu paket, Discord.js ile kolayca entegre edilebilir ve botunuzun aktifliğini daha ilgi çekici hale getirebilir.
-=======
 Discord botunuz için dinamik ve esnek aktivite sistemi. Belirli aralıklarla otomatik olarak değişen bot aktiviteleri oluşturun ve webhook entegrasyonuyla aktivite değişimlerini takip edin.
->>>>>>> Stashed changes
 
 [![npm version](https://img.shields.io/npm/v/oxypack)](https://www.npmjs.com/package/oxypack)
 [![npm downloads](https://img.shields.io/npm/dt/oxypack)](https://www.npmjs.com/package/oxypack)
@@ -43,47 +39,6 @@ client.on('ready', () => {
   oxy(client);
 });
 
-<<<<<<< Updated upstream
-```js
-oxypack(client, [
-  { name: '##oxydesign', type: 'WATCHING' },
-  { name: '##oxydesign', type: 'PLAYING' },
-  { name: '##oxydesign', type: 'LISTENING' },
-  { name: '##oxydesign', type: 'STREAMING', url: 'https://twitch.tv/example' }
-], 60000, true);  // Aktiviteyi her 1 dakikada bir değiştir
-```
-
-### Örnek ready.js dosyası
-
-```js
-const { oxypack } = require('oxypack');
-
-const aktivite = [
-  { name: '##oxydesign' }, // Varsayılan olarak "Playing"
-  { name: '##oxydesign', type: 'watching' }, // İzliyor
-  { name: '##oxydesign', type: 'listening' }, // Dinliyor
-  { name: '##oxydesign', type: 'competing' }, // Yarışıyor
-  { name: '##oxydesign', type: 'streaming', url: 'https://twitch.tv/ornek' } // Yayınlıyor //SADECE TWİTCH VE YOUTUBE CANLI YAYIN LİNKLERİ
-];
-
-
-module.exports = {
-  name: 'ready',
-  once: true,
-  execute(client) {
-    console.log(`${client.user.tag} olarak giriş yaptım!`);
-    oxypack(client, aktivite, 10000, false);
-  }
-};
-```
-
-### 3. Parametreler
-
-- **client:** Discord botunuzun `client` nesnesi.
-- **activities:** Aktivite dizisi, botunuzun yapacağı farklı aktiviteler.
-- **interval (ms):** Aktivitenin değişme sıklığı, milisaniye cinsindendir (varsayılan: 2 dakika).
-- **logActivity (boolean):** Aktivite değişiminde konsola log mesajı gösterilsin mi? (`true` / `false`).
-=======
 client.login('TOKEN');
 ```
 
@@ -222,13 +177,12 @@ Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
 
 ## 👨‍💻 Geliştirici
 
-OxyDesign tarafından geliştirilmiştir.
+Oxy tarafından geliştirilmiştir.
 
 - Discord: @oxyinc
-- GitHub: [github.com/hasbutcu](https://github.com/hasbutcu)
+- GitHub: [github.com/oxydesign](https://github.com/hasbutcu)
 - Website: [oxyinc.xyz](https://oxyinc.xyz)
 
 ---
 
 🌟 OxyPack'i beğendiyseniz yıldız vermeyi unutmayın! 🌟
->>>>>>> Stashed changes
